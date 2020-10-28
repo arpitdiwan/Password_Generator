@@ -1,0 +1,316 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+from test import call_func
+from about import *
+from update import *
+
+
+class Ui_MainWindow(object):
+    def openWindow(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_About()
+        self.ui.setup(self.window)
+        self.window.show()
+
+    def openUpdate(self):
+        self.w = QtWidgets.QMainWindow()
+        self.ui_up = Ui_UpdateWindow()
+        self.ui_up.setup_up(self.w)
+        self.w.show()
+
+
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(469, 524)
+        font = QtGui.QFont()
+        font.setFamily("Product Sans")
+        font.setPointSize(10)
+        MainWindow.setFont(font)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setGeometry(QtCore.QRect(30, 20, 381, 81))
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.label = QtWidgets.QLabel(self.frame)
+        self.label.setEnabled(True)
+        self.label.setGeometry(QtCore.QRect(10, 10, 361, 51))
+        font = QtGui.QFont()
+        font.setFamily("Product Sans")
+        font.setPointSize(22)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(400, 450, 31, 16))
+        font = QtGui.QFont()
+        font.setPointSize(6)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.frame_2 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_2.setGeometry(QtCore.QRect(30, 110, 381, 261))
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.widget = QtWidgets.QWidget(self.frame_2)
+        self.widget.setGeometry(QtCore.QRect(30, 30, 313, 213))
+        self.widget.setObjectName("widget")
+        self.gridLayout = QtWidgets.QGridLayout(self.widget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label_7 = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Product Sans")
+        font.setPointSize(10)
+        self.label_7.setFont(font)
+        self.label_7.setObjectName("label_7")
+        self.gridLayout.addWidget(self.label_7, 4, 0, 1, 1)
+        self.pass_length = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Product Sans")
+        font.setPointSize(10)
+        self.pass_length.setFont(font)
+        self.pass_length.setObjectName("pass_length")
+        self.gridLayout.addWidget(self.pass_length, 0, 0, 1, 1)
+        self.label_4 = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Product Sans")
+        font.setPointSize(10)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout.addWidget(self.label_4, 1, 0, 1, 1)
+        self.pass_len = QtWidgets.QComboBox(self.widget)
+        self.pass_len.setObjectName("pass_len")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.pass_len.addItem("")
+        self.gridLayout.addWidget(self.pass_len, 0, 2, 1, 1)
+        self.inc_sym = QtWidgets.QCheckBox(self.widget)
+        self.inc_sym.setObjectName("inc_sym")
+        self.gridLayout.addWidget(self.inc_sym, 1, 2, 1, 1)
+        self.inc_num = QtWidgets.QCheckBox(self.widget)
+        self.inc_num.setObjectName("inc_num")
+        self.gridLayout.addWidget(self.inc_num, 2, 2, 1, 1)
+        self.label_5 = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Product Sans")
+        font.setPointSize(10)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout.addWidget(self.label_5, 2, 0, 1, 1)
+        self.inc_uppr = QtWidgets.QCheckBox(self.widget)
+        self.inc_uppr.setObjectName("inc_uppr")
+        self.gridLayout.addWidget(self.inc_uppr, 3, 2, 1, 1)
+        self.inc_low = QtWidgets.QCheckBox(self.widget)
+        self.inc_low.setObjectName("inc_low")
+        self.gridLayout.addWidget(self.inc_low, 4, 2, 1, 1)
+        self.label_6 = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Product Sans")
+        font.setPointSize(10)
+        self.label_6.setFont(font)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout.addWidget(self.label_6, 3, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addItem(spacerItem, 2, 1, 1, 1)
+        self.label_12 = QtWidgets.QLabel(self.widget)
+        self.label_12.setObjectName("label_12")
+        self.gridLayout.addWidget(self.label_12, 5, 0, 1, 1)
+        self.pass_strength = QtWidgets.QLabel(self.widget)
+        self.pass_strength.setObjectName("pass_strength")
+        self.gridLayout.addWidget(self.pass_strength, 5, 2, 1, 1)
+        self.frame_3 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_3.setGeometry(QtCore.QRect(30, 380, 381, 80))
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.gen = QtWidgets.QPushButton(self.frame_3)
+        self.gen.setGeometry(QtCore.QRect(10, 20, 141, 31))
+        self.gen.setObjectName("gen")
+        self.password_field = QtWidgets.QLineEdit(self.frame_3)
+        self.password_field.setGeometry(QtCore.QRect(160, 20, 191, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.password_field.setFont(font)
+        self.password_field.setText("")
+        self.password_field.setObjectName("password_field")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 469, 27))
+        self.menubar.setObjectName("menubar")
+        self.menuHelp = QtWidgets.QMenu(self.menubar)
+        self.menuHelp.setObjectName("menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.Clear_All = QtWidgets.QAction(MainWindow)
+        self.Clear_All.setObjectName("Clear_All")
+        self.chk_update = QtWidgets.QAction(MainWindow)
+        self.chk_update.setObjectName("chk_update")
+        self.abt_pg = QtWidgets.QAction(MainWindow)
+        self.abt_pg.setObjectName("abt_pg")
+        self.menuHelp.addAction(self.Clear_All)
+        self.menuHelp.addAction(self.chk_update)
+        self.menuHelp.addSeparator()
+        self.menuHelp.addAction(self.abt_pg)
+        self.menubar.addAction(self.menuHelp.menuAction())
+
+        self.abt_pg.triggered.connect(self.openWindow)
+        self.chk_update.triggered.connect(self.openUpdate)
+
+        self.retranslateUi(MainWindow)
+        self.Clear_All.triggered.connect(self.password_field.clear)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Password Generator"))
+        self.label.setText(_translate("MainWindow", "Password Generator"))
+        self.label_2.setText(_translate("MainWindow", "V 1.0"))
+        self.label_7.setText(_translate("MainWindow", "Include Lower case"))
+        self.pass_length.setText(_translate("MainWindow", "Password Length:"))
+        self.label_4.setText(_translate("MainWindow", "Include Symbols"))
+        self.pass_len.setItemText(0, _translate("MainWindow", "6"))
+        self.pass_len.setItemText(1, _translate("MainWindow", "7"))
+        self.pass_len.setItemText(2, _translate("MainWindow", "8"))
+        self.pass_len.setItemText(3, _translate("MainWindow", "9"))
+        self.pass_len.setItemText(4, _translate("MainWindow", "10"))
+        self.pass_len.setItemText(5, _translate("MainWindow", "11"))
+        self.pass_len.setItemText(6, _translate("MainWindow", "12"))
+        self.pass_len.setItemText(7, _translate("MainWindow", "13"))
+        self.pass_len.setItemText(8, _translate("MainWindow", "14"))
+        self.pass_len.setItemText(9, _translate("MainWindow", "15"))
+        self.pass_len.setItemText(10, _translate("MainWindow", "16"))
+        self.pass_len.setItemText(11, _translate("MainWindow", "17"))
+        self.pass_len.setItemText(12, _translate("MainWindow", "18"))
+        self.pass_len.setItemText(13, _translate("MainWindow", "19"))
+        self.pass_len.setItemText(14, _translate("MainWindow", "20"))
+        self.pass_len.setItemText(15, _translate("MainWindow", "21"))
+        self.pass_len.setItemText(16, _translate("MainWindow", "22"))
+        self.pass_len.setItemText(17, _translate("MainWindow", "23"))
+        self.pass_len.setItemText(18, _translate("MainWindow", "24"))
+        self.pass_len.setItemText(19, _translate("MainWindow", "25"))
+        self.pass_len.setItemText(20, _translate("MainWindow", "26"))
+        self.pass_len.setItemText(21, _translate("MainWindow", "27"))
+        self.pass_len.setItemText(22, _translate("MainWindow", "28"))
+        self.pass_len.setItemText(23, _translate("MainWindow", "29"))
+        self.pass_len.setItemText(24, _translate("MainWindow", "30"))
+        self.pass_len.setItemText(25, _translate("MainWindow", "31"))
+        self.pass_len.setItemText(26, _translate("MainWindow", "32"))
+        self.inc_sym.setText(_translate("MainWindow", "e.g. @#$%"))
+        self.inc_num.setText(_translate("MainWindow", "e.g. 123"))
+        self.label_5.setText(_translate("MainWindow", "Include Numbers"))
+        self.inc_uppr.setText(_translate("MainWindow", "e.g. ABCD"))
+        self.inc_low.setText(_translate("MainWindow", "e.g. abcd"))
+        self.label_6.setText(_translate("MainWindow", "Include Upper case"))
+        self.label_12.setText(_translate("MainWindow", "Password Strength"))
+        self.pass_strength.setText(_translate("MainWindow", "________________"))
+        self.gen.setText(_translate("MainWindow", "Generate"))
+        self.menuHelp.setTitle(_translate("MainWindow", "Help"))
+        self.Clear_All.setText(_translate("MainWindow", "Clear All"))
+        self.chk_update.setText(_translate("MainWindow", "Check for Updates"))
+        self.abt_pg.setText(_translate("MainWindow", "About Password Generator"))
+
+        self.gen.clicked.connect(self.func_gen)
+
+    def func_gen(self):
+        length = self.pass_len.currentText()
+
+        sym = self.inc_sym.isChecked()
+        low = self.inc_low.isChecked()
+        upr = self.inc_uppr.isChecked()
+        numb = self.inc_num.isChecked()
+
+        pass_f = call_func(length, sym, low, upr, numb)
+
+        if sym is True and upr is True and int(length) >= 10:
+            if low is True and numb is True:
+                self.pass_strength.setText('EXCELLENT')
+            elif low is True and numb is False:
+                self.pass_strength.setText('VERY STRONG')
+            elif low is False and numb is True:
+                self.pass_strength.setText('STRONG')
+            elif low is False and numb is False:
+                self.pass_strength.setText('STRONG')
+
+        elif sym is False and upr is True and int(length) < 10:
+            if low is True and numb is True:
+                self.pass_strength.setText('MODERATE')
+            elif low is True and numb is False:
+                self.pass_strength.setText('GOOD')
+            elif low is False and numb is True:
+                self.pass_strength.setText('FAIR')
+            elif low is False and numb is False:
+                self.pass_strength.setText('POOR')
+
+        elif sym is False and upr is False and int(length) >= 10:
+            if low is False and numb is False:
+                self.pass_strength.setText('No Parameter[]')
+            elif low is False and numb is True:
+                self.pass_strength.setText('HIGH RISK')
+            elif low is True and numb is True:
+                self.pass_strength.setText('MODRATE')
+            elif low is True and numb is False:
+                self.pass_strength.setText('MODRATE')
+
+        elif sym is True and upr is False and int(length) < 10:
+            if low is True and numb is True:
+                self.pass_strength.setText('SHORT')
+            elif low is True and numb is False:
+                self.pass_strength.setText('GOOD')
+            elif low is False and numb is True:
+                self.pass_strength.setText('FAIR')
+            elif low is False and numb is False:
+                self.pass_strength.setText('SHORT')
+
+        elif sym is True and upr is True and int(length) < 10:
+            if low is True and numb is True:
+                self.pass_strength.setText('SHORT')
+            elif low is True and numb is False:
+                self.pass_strength.setText('SHORT')
+            elif low is False and numb is True:
+                self.pass_strength.setText('SHORT')
+            elif low is False and numb is False:
+                self.pass_strength.setText('SHORT')
+
+        self.password_field.setText(pass_f)
+
+
+
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
